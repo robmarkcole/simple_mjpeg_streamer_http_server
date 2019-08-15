@@ -56,7 +56,7 @@ def main():
 	global img
 	try:
 		server = ThreadedHTTPServer(('0.0.0.0', 8080), CamHandler)
-		print("server started")
+		print("server started, visit http://127.0.0.1:8080/cam.mjpg")
 		server.serve_forever()
 	except KeyboardInterrupt:
 		capture.release()
